@@ -11,13 +11,13 @@
     </head>
     <body>
         <header>
-            <img src="seta.png" alt="Icone de pesquisa" width='30' height="30">
+            <a href=""><img class="seta" src="img/seta.png" alt="Icone de pesquisa" width='30' height="30"> </a>
             <h1>Informações Gerais</h1>
         </header>
         <main>
             <p>
                 <h2>Quantos anos tem seu cachorro?</h2>
-                <form class = "opcoes">
+                <form name = "idade" class = "opcoes">
                     <input type = "radio" id="0-1" name="idade" value="0-1">
                     <label>0-1</label><br>
                     <input type = "radio" id="1-3" name="idade" value="1-3">
@@ -36,7 +36,7 @@
             </p>
             <p>
                 <h2>Qual o porte do seu cachorro?</h2>
-                <form class="opcoes">
+                <form name = "porte" class="opcoes">
                     <input type = "radio" id="Anão" name="porte" value="Anão">
                     <label>Anão</label><br>
                     <input type = "radio" id="Pequeno" name="porte" value="Pequeno">
@@ -49,27 +49,55 @@
             </p>
             <p>
                 <h2>Seu cachorro tem algum problema ou condição pré-existente?</h2>
-                <form class="opcoes">
-                    <input type = "radio" id="Sim" name="pre-exist" value="Sim">
+                <form name="pre_exist" class="opcoes">
+                    <input type = "radio" id="Sim" name="pre_exist" value="Sim">
                     <label>Sim</label><br>
-                    <input type = "radio" id="Não" name="pre-exist" value="Não">
+                    <input type = "radio" id="Não" name="pre_exist" value="Não">
                     <label>Não</label><br>
-                    <c>Caso sim, quais?</c>
+                    <c>Caso sim, quais?</c><br>
                     <e><input></e>
                 </form>
             </p>
             <p>
                 <h2>Recentemente ele teve contato com outros cachorros?</h2>
-                <form class="opcoes">
+                <form name="contato" class="opcoes">
                     <input type = "radio" id="Sim" name="contato" value="Sim">
                     <label>Sim</label><br>
                     <input type = "radio" id="Não" name="contato" value="Não">
                     <label>Não</label><br>
                 </form>
             </p>
-            <a href="Questionário2.html">
-                <h2 class='aa'>Prosseguir</h2>
-            </a>
-        </main>    
+            <button id="prosseguir">Prosseguir</button>
+        </main>
+        <script>
+            var myDiv = document.createElement("div");
+            var ir = document.getElementById("prosseguir");
+            //Set its unique ID.
+            myDiv.id = 'div_id';
+
+            ir.onclick = function () {
+                var idade = document.idade.idade.value;
+                var porte = document.porte.porte.value;
+                var pre_exist = document.pre_exist.pre_exist.value;
+                var contato = document.contato.contato.value;
+
+                if (idade==""){
+                    myDiv.innerHTML = "<h1>Favor preencher todos os campos</h1>";
+                    document.body.appendChild(myDiv);
+                } else if (porte == ""){
+                    myDiv.innerHTML = "<h1>Favor preencher todos os campos</h1>";
+                    document.body.appendChild(myDiv);
+                } else if(pre_exist == ""){
+                    myDiv.innerHTML = "<h1>Favor preencher todos os campos</h1>";
+                    document.body.appendChild(myDiv);
+                } else if(contato == ""){
+                    myDiv.innerHTML = "<h1>Favor preencher todos os campos</h1>";
+                    document.body.appendChild(myDiv);
+                } else{
+                    location.href = "Questionário2.html"
+                }
+                
+            };
+        </script>    
     </body>
 </html>
