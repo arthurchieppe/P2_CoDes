@@ -1,12 +1,8 @@
-html, body, main{
+html, body{
     height: 100%;
     width: 100%;
 	font-family: 'Source Sans Pro', sans-serif;
     background-color: #C280FF;
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-    align-items: center;
 }
 
 header{
@@ -15,7 +11,7 @@ header{
 	align-items: center;	
 }
 
-body{
+main{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
@@ -45,11 +41,11 @@ h2{
     border-style: solid;
     border-color: black;
     background-color: #938AF5;
-    margin-left: 520px;
-    margin-right: 520px;
+    margin-left: 1rem;
+    margin-right: 1rem;
     border-width: 1px;
     font-size: 1rem;
-    padding-bottom: 1rem;
+    padding: 1rem;
     cursor:pointer;
 }
 c{

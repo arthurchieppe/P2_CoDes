@@ -4,14 +4,14 @@
         <title>QUESTIONÁRIO2</title>
         <meta charset="UFT-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/Questionario2.css">
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="../css/Questionario2.css">
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
-            <a href="Questionário1.html"><img class="seta" src="img/seta.png" alt="Icone de pesquisa" width='30' height="30"> </a>
+            <a href="Questionário1.html"><img class="seta" src="../img/seta.png" alt="Icone de pesquisa" width='30' height="30"> </a>
             <h1>Saúde</h1>
         </header>
         <main>
@@ -68,7 +68,7 @@
                     <label>Sim</label><br>
                     <input type = "radio" id="Não" name="vacinas" value="Não">
                     <label>Não</label><br>
-                    <c>Caso não, quais?</c>
+                    <c>Caso não, quais?</c><br>
                     <e><input></e>
                 </form>
             </p>
@@ -85,11 +85,11 @@
                 var vacinas = document.vacinas.vacinas.value;
                 
                 if (consulta==""){
-                    myDiv.innerHTML = "<h1>Favor preencher todos os campos</h1>";
-                    document.body.appendChild(myDiv);
+                    myDiv.innerHTML = "<h2>Favor preencher todos os campos</h2>";
+                    document.body.insertBefore(myDiv, document.body.firstChild);
                 } else if (vacinas == ""){
-                    myDiv.innerHTML = "<h1>Favor preencher todos os campos</h1>";
-                    document.body.appendChild(myDiv);
+                    myDiv.innerHTML = "<h2>Favor preencher todos os campos</h2>";
+                    document.body.insertBefore(myDiv, document.body.firstChild);
                 } else{
                     location.href = "Questionário3.html"
                 }   
