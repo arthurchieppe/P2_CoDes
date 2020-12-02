@@ -18,6 +18,7 @@ th {
 	height: 15%; 
 	font-size: 30px;
 	border-bottom: 0.05rem solid gray;
+
 }
 
 td {
@@ -36,3 +37,11 @@ button {
     transition-duration: 0.4s;
     cursor: pointer;
   }
+
+a {
+	position: absolute;
+	top: 3%;
+	z-index: 2;
+	margin: 1rem;
+	padding: 1rem;
+}
