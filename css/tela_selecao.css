@@ -18,9 +18,10 @@ a {
     left: 2%;
 }
 h1 {
-    position: absolute;
+    position: fixed;
     top: 2%;
-    left: 50%;
+    left: 47%;
+    font-size: 200%;
 }
 
 h2 {
@@ -49,4 +50,4 @@ button {
     margin: 1rem 0.5rem;
     transition-duration: 0.4s;
     cursor: pointer;
-  }
+}
